@@ -1,21 +1,95 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+import HomeScreen from './src/Screens/Home/home';
+import ProfileScreen from './src/Screens/Profile/profile';
+import CategoryScreen from './src/Screens/Category/category';
+import FavoriteScreen from './src/Screens/Favorite/favorite';
+import ProductScreen from './src/Screens/Product/product';
+
+
+
+import { Button, View, Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { MaterialCommunityIcons, AntDesign, MaterialIcons, Ionicons } from '@expo/vector-icons';
+
+const Tab = createBottomTabNavigator();
+const HomeStack = createNativeStackNavigator();
+const CategoryStack = createNativeStackNavigator();
+const FavoriteStack = createNativeStackNavigator();
+const ProfileStack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Tab.Navigator screenOptions={{ headerShown: false }}>
+        <Tab.Screen name="Home"
+          options={{
+            tabBarLabel: 'Home',
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons name="home" color={color} size={size} />
+            ),
+          }}
+        >
+          {() => (
+            <HomeStack.Navigator>
+              <HomeStack.Screen name="Home" component={HomeScreen} />
+            </HomeStack.Navigator>
+          )}
+        </Tab.Screen>
+
+        <Tab.Screen name="Category"
+          options={{
+            tabBarLabel: 'Category',
+            tabBarIcon: ({ color, size }) => (
+              <MaterialIcons name="category" size={24} color={color} />
+            ),
+          }}
+        >
+          {() => (
+            <CategoryStack.Navigator>
+              <CategoryStack.Screen name="Category" component={CategoryScreen} />
+              <CategoryStack.Screen name="Products" component={ProductScreen} />
+            </CategoryStack.Navigator>
+          )}
+        </Tab.Screen>
+
+        <Tab.Screen name="Favorite"
+          options={{
+            tabBarLabel: 'Favorite',
+            tabBarIcon: ({ color, size }) => (
+              <AntDesign name="heart" color={color} size={18} />
+            ),
+          }}
+        >
+          {() => (
+            <FavoriteStack.Navigator>
+              <FavoriteStack.Screen name="Favorite" component={FavoriteScreen} />
+            </FavoriteStack.Navigator>
+          )}
+        </Tab.Screen>
+
+        <Tab.Screen name="Profile"
+          options={{
+            tabBarLabel: 'Profile',
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name="person-sharp" size={24} color={color} />
+            ),
+          }}
+        >
+          {() => (
+            <ProfileStack.Navigator>
+              <ProfileStack.Screen
+                name="Profile"
+                component={ProfileScreen}
+              />
+            </ProfileStack.Navigator>
+          )}
+        </Tab.Screen>
+
+
+
+      </Tab.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
