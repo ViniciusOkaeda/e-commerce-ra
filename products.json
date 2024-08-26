@@ -1,0 +1,178 @@
+{
+    "data": [
+        {
+            "products_id": 1,
+            "products_name": "Suéter Vintage",
+            "products_description": "",
+            "products_price": "79,99",
+            "products_image": "sueter_destaque",
+            "products_category": 2,
+            "sizes": [
+                {
+                    "sizes_id": 1,
+                    "sizes_name": "P"
+                }
+            ],
+            "colors": [
+                {
+                    "colors_id": 1,
+                    "colors_name": "#ff3026"
+                }
+            ],
+            "images": [
+                {
+                    "images_url": "sueter1"
+                },
+                {
+                    "images_url": "sueter2"
+                },
+                {
+                    "images_url": "sueter3"
+                },
+                {
+                    "images_url": "sueter4"
+                },
+                {
+                    "images_url": "sueter5"
+                },
+                {
+                    "images_url": "sueter6"
+                },
+                {
+                    "images_url": "sueter7"
+                },
+                {
+                    "images_url": "sueter8"
+                },
+                {
+                    "images_url": "sueter9"
+                }
+            ]
+        },
+        {
+            "products_id": 2,
+            "products_name": "Jaqueta Jeans",
+            "products_description": "",
+            "products_price": "179,99",
+            "products_image": "jeans_destaque",
+            "products_category": 2,
+            "sizes": [
+                {
+                    "sizes_id": 1,
+                    "sizes_name": "P"
+                }
+            ],
+            "colors": [
+                {
+                    "colors_id": 2,
+                    "colors_name": "#7da8d0"
+                }
+            ],
+            "images": [
+                {
+                    "images_url": "sueter1"
+                }
+            ]
+        },
+        {
+            "products_id": 3,
+            "products_name": "Jaqueta Sweet",
+            "products_description": "",
+            "products_price": "129,99",
+            "products_image": "jaqueta_destaque",
+            "products_category": 2,
+            "sizes": [
+                {
+                    "sizes_id": 1,
+                    "sizes_name": "P"
+                }
+            ],
+            "colors": [
+                {
+                    "colors_id": 1,
+                    "colors_name": "#ff3026"
+                }
+            ],
+            "images": [
+                {
+                    "images_url": "sueter1"
+                }
+            ]
+        },
+        {
+            "products_id": 4,
+            "products_name": "Jaqueta Couro",
+            "products_description": "",
+            "products_price": "229,99",
+            "products_image": "jaqueta_destaque3",
+            "products_category": 2,
+            "sizes": [
+                {
+                    "sizes_id": 1,
+                    "sizes_name": "P"
+                }
+            ],
+            "colors": [
+                {
+                    "colors_id": 2,
+                    "colors_name": "#7da8d0"
+                }
+            ],
+            "images": [
+                {
+                    "images_url": "sueter1"
+                }
+            ]
+        },
+        {
+            "products_id": 5,
+            "products_name": "Suéter Classic",
+            "products_description": "",
+            "products_price": "99,99",
+            "products_image": "sueter_destaque2",
+            "products_category": 2,
+            "sizes": [
+                {
+                    "sizes_id": 1,
+                    "sizes_name": "P"
+                }
+            ],
+            "colors": [
+                {
+                    "colors_id": 1,
+                    "colors_name": "#ff3026"
+                }
+            ],
+            "images": [
+                {
+                    "images_url": "sueter1"
+                }
+            ]
+        },
+        {
+            "products_id": 6,
+            "products_name": "Blazer Feminino",
+            "products_description": "",
+            "products_price": "179,99",
+            "products_image": "jaqueta_destaque2",
+            "products_category": 2,
+            "sizes": [
+                {
+                    "sizes_id": 1,
+                    "sizes_name": "P"
+                }
+            ],
+            "colors": [
+                {
+                    "colors_id": 2,
+                    "colors_name": "#7da8d0"
+                }
+            ],
+            "images": [
+                {
+                    "images_url": "sueter1"
+                }
+            ]
+        }
+    ]
+}

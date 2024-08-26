@@ -1,9 +1,11 @@
 import * as React from 'react';
+import { StatusBar } from 'react-native';
 import HomeScreen from './src/Screens/Home/home';
 import ProfileScreen from './src/Screens/Profile/profile';
 import CategoryScreen from './src/Screens/Category/category';
 import FavoriteScreen from './src/Screens/Favorite/favorite';
 import ProductScreen from './src/Screens/Product/product';
+import ProductsByCategory from './src/Screens/Category/Products/products';
 
 
 
@@ -19,10 +21,15 @@ const CategoryStack = createNativeStackNavigator();
 const FavoriteStack = createNativeStackNavigator();
 const ProfileStack = createNativeStackNavigator();
 
+
+
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator screenOptions={{ headerShown: false }}>
+      <StatusBar barStyle="light-content" backgroundColor="#007bff" />
+      <Tab.Navigator screenOptions={{ headerShown: false, tabBarActiveTintColor: '#628DB4' }}>
+
+
         <Tab.Screen name="Home"
           options={{
             tabBarLabel: 'Home',
@@ -32,7 +39,12 @@ export default function App() {
           }}
         >
           {() => (
-            <HomeStack.Navigator>
+            <HomeStack.Navigator
+              screenOptions={{
+              headerStyle: { backgroundColor: '#628DB4' }, // Cor de fundo da barra superior das telas de navegação
+              headerTintColor: '#fff', // Cor do texto da barra superior
+            }}
+            >
               <HomeStack.Screen name="Home" component={HomeScreen} />
             </HomeStack.Navigator>
           )}
@@ -47,9 +59,18 @@ export default function App() {
           }}
         >
           {() => (
-            <CategoryStack.Navigator>
+            <CategoryStack.Navigator               
+              screenOptions={{
+              headerStyle: { backgroundColor: '#628DB4' }, // Cor de fundo da barra superior das telas de navegação
+              headerTintColor: '#fff', // Cor do texto da barra superior
+            }}>
               <CategoryStack.Screen name="Category" component={CategoryScreen} />
-              <CategoryStack.Screen name="Products" component={ProductScreen} />
+              <CategoryStack.Screen name="ProductsByCategory" component={ProductsByCategory}           
+              options={({ route }) => ({
+              
+              //headerBackVisible: false, // Oculta o botão de voltar
+              headerBackTitleVisible: false, // Oculta o texto do botão de voltar
+          })} />
             </CategoryStack.Navigator>
           )}
         </Tab.Screen>
@@ -63,7 +84,12 @@ export default function App() {
           }}
         >
           {() => (
-            <FavoriteStack.Navigator>
+            <FavoriteStack.Navigator
+              screenOptions={{
+              headerStyle: { backgroundColor: '#628DB4' }, // Cor de fundo da barra superior das telas de navegação
+              headerTintColor: '#fff', // Cor do texto da barra superior
+            }}
+            >
               <FavoriteStack.Screen name="Favorite" component={FavoriteScreen} />
             </FavoriteStack.Navigator>
           )}
@@ -78,7 +104,12 @@ export default function App() {
           }}
         >
           {() => (
-            <ProfileStack.Navigator>
+            <ProfileStack.Navigator
+              screenOptions={{
+              headerStyle: { backgroundColor: '#628DB4' }, // Cor de fundo da barra superior das telas de navegação
+              headerTintColor: '#fff', // Cor do texto da barra superior
+            }}
+            >
               <ProfileStack.Screen
                 name="Profile"
                 component={ProfileScreen}
